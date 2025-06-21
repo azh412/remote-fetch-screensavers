@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rotating Screensaver</title>
+  <style>
+    /* These styles make the iframe fill the entire screen without borders or scrollbars */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background-color: black; /* Background color during the brief load time */
+    }
+    iframe {
+      border: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <!-- This iframe is where the YouTube video will be displayed -->
+  <iframe id="screensaver-frame"></iframe>
+
+  <script>
+    const rotationIntervalInMinutes = 2;
+
+    const screensavers = [
+      'https://www.youtube.com/embed/-d4rS1lFzTQ?autoplay=1&mute=1&controls=0&vq=highres', // chicago
+      'https://www.youtube.com/embed/HfgIFGbdGJ0?autoplay=1&mute=1&controls=0&vq=highres', // rotation
+      'https://www.youtube.com/embed/_BMi3usEwi8?autoplay=1&mute=1&controls=0&vq=highres', // ocean
+      'https://www.youtube.com/embed/_k-5U7IeK8g?autoplay=1&mute=1&controls=0&vq=highres', // tokyo
+      'https://www.youtube.com/embed/rnXIjl_Rzy4?autoplay=1&mute=1&controls=0&vq=highres&vq=highres', // Times Square
+    ];
+
+    const iframe = document.getElementById('screensaver-frame');
+    let currentUrl = '';
+
+    function setRandomScreensaver() {
+      let newUrl;
+      do {
+        const randomIndex = Math.floor(Math.random() * screensavers.length);
+        newUrl = screensavers[randomIndex];
+      } while (screensavers.length > 1 && newUrl === currentUrl);
+      
+      currentUrl = newUrl;
+      iframe.src = currentUrl;
+      console.log('Switching to:', currentUrl);
+    }
+
+    setRandomScreensaver();
+    setInterval(setRandomScreensaver, rotationIntervalInMinutes * 60 * 1000);
+  </script>
+</body>
+</html>
