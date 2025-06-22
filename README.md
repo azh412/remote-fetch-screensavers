@@ -1,10 +1,10 @@
 # remote-fetch-screensavers: Rotating YouTube Livestream Screensaver
 
-A simple, self-contained HTML file that turns a list of YouTube livestreams into a dynamic, rotating screensaver for macOS using the [WebViewScreenSaver](https://github.com/liquidx/webviewscreensaver) extension.
+A simple, self-contained HTML file that turns a list of YouTube livestreams or 4K videos into a dynamic, rotating screensaver for macOS using the [WebViewScreenSaver](https://github.com/liquidx/webviewscreensaver) extension.
 
 ## What It Does
 
-This project provides a single `index.html` file that, when hosted online (for free via GitHub Pages), serves as a "control panel" for your screensaver. It randomly selects a YouTube livestream from a predefined list and displays it. After a configurable amount of time, it automatically and seamlessly switches to another random livestream.
+This project provides a single `index.html` file that, when hosted online (for free via GitHub Pages), serves as a "control panel" for your screensaver. It randomly selects a YouTube livestream or 4K video from a predefined list and displays it. After a configurable amount of time, it automatically and seamlessly switches to another random livestream or video.
 
 ### Features
 
