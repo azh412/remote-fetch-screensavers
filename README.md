@@ -15,7 +15,7 @@ This project provides a single `index.html` file that, when hosted online (for f
 -   **Zero Cost:** Runs entirely on free GitHub Pages hosting.
 -   **Clean View:** The YouTube embed URLs are configured to hide controls and autoplay silently.
 
-## How to Use
+## Usage
 
 #### Step 1: Install the Screensaver Extension
 
